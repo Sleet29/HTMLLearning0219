@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css 동적 변화 만들기 예제</title>
+<style>
+.container {
+	cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 6px 0;
+	position: relative;
+	left: 100px;
+	top: 100px;
+	transition: all 0.5s ease; /* 변화를 3초 동안 진행하도록 설정 */
+}
+
+.container:hover .bar2 {
+			/* 공백은 뭐다? 호손 */
+	opacity:0;
+}
+
+.container:hover .bar3 {
+	transform: rotate(225deg);
+}
+
+.container:hover .bar1 {
+	transform: rotate(-225deg);
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</div>
+</body>
+</html>
